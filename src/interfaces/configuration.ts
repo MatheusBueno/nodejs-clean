@@ -3,7 +3,8 @@
  * and detail implementation
  */
 class Configuration {
-  // constructor()
+  configurationAdapter: any;
+
   // We are injecting the configuration adapter as part of the constructor
   constructor(options) {
     this.configurationAdapter = options.ConfigurationAdapter;
@@ -18,4 +19,4 @@ class Configuration {
   }
 }
 
-module.exports = Configuration;
+export default Configuration;

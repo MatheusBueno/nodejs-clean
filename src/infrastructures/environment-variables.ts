@@ -3,10 +3,9 @@
  * from process and/or operating system so it is available to be used in
  * this application
  */
-const ConfigurationData = require('../domains/configuration-data');
+import ConfigurationData from '../domains/configuration-data';
 
 class EnvironmentVariable {
-
   // load() is responsible for loading configuration data
   load() {
     // By using the domain's Configuration data object here
@@ -23,4 +22,4 @@ class EnvironmentVariable {
   }
 }
 
-module.exports = EnvironmentVariable;
+export default EnvironmentVariable;

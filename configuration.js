@@ -2,7 +2,6 @@
  * Configuration usecases is a business logic of configuration
  */
 class Configuration {
-  // Constructor
   // We are injecting the configuration interface as part of the constructor
   constructor(options) {
     this.configurationInterface = options.ConfigurationInterface;
@@ -17,4 +16,4 @@ class Configuration {
   }
 }
 
-module.exports = Configuration;
+export default Configuration;

@@ -1,7 +1,7 @@
 /**
  * Version usecase is a business logic of version
  */
-const VersionDomain = require('../domains/version');
+import VersionDomain from "../domains/version";
 
 class Version {
   // display method show the current version number of this application
@@ -10,8 +10,8 @@ class Version {
   }
 
   static toString() {
-    return 'Version use case';
+    return "Version use case";
   }
 }
 
-module.exports = Version;
+export default Version;

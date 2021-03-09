@@ -1,8 +1,10 @@
 /**
- * Database interface is a gateway between an application and 
+ * Database interface is a gateway between an application and
  * database related actions
  */
 class Database {
+  databaseAdapter: any;
+
   constructor(options) {
     this.databaseAdapter = options.DatabaseAdapter;
   }
@@ -16,4 +18,4 @@ class Database {
   }
 }
 
-module.exports = Database;
+export default Database;

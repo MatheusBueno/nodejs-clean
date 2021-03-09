@@ -10,4 +10,4 @@ class MongoDb {
   }
 }
 
-module.exports = MongoDb;
+export default MongoDb;

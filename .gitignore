@@ -76,7 +76,7 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -187,3 +187,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# 
+dist/

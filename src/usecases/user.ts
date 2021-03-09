@@ -1,9 +1,13 @@
 /**
  * User usecases is a business logic of user
  */
-const UserDomain = require('../domains/user');
+import UserDomain from "../domains/user";
 
 class User {
+  configurationData: any;
+  authenticationInterface: any;
+  databaseInterface: any;
+
   constructor(options) {
     this.configurationData = options.ConfigurationData;
     this.authenticationInterface = options.AuthenticationInterface;
@@ -11,13 +15,12 @@ class User {
   }
 
   createNewEmailUser(options) {
-    if (!options && typeof options === 'undefined') {
-      throw new Error('Missing (Email) user information');
+    if (!options && typeof options === "undefined") {
+      throw new Error("Missing (Email) user information");
     }
 
-    if (!options.Email
-      || !options.Password) {
-      throw new Error('Missing Email and/or password information');
+    if (!options.Email || !options.Password) {
+      throw new Error("Missing Email and/or password information");
     }
 
     if (this.databaseInterface.isUserExists(options.Email)) {
@@ -50,14 +53,15 @@ class User {
     const nowInMilliseconds = now.getTime();
 
     const nextYearInMilliseconds = new Date(
-      new Date().setFullYear(now.getFullYear() + 1)).getTime();
+      new Date().setFullYear(now.getFullYear() + 1)
+    ).getTime();
 
     return (nextYearInMilliseconds - nowInMilliseconds) / 1000;
   }
 
   static toString() {
-    return 'User interactor';
+    return "User interactor";
   }
 }
 
-module.exports = User;
+export default User;

@@ -3,7 +3,8 @@
  * implementation
  */
 class WebServer {
-  // constructor()
+  versionInteractor: any;
+
   // We are injecting the interactors as part of the constructor
   constructor(options) {
     this.versionInteractor = options.VersionInteractor;
@@ -15,8 +16,8 @@ class WebServer {
   }
 
   static toString() {
-    return 'Web Server Interfaces';
+    return "Web Server Interfaces";
   }
 }
 
-module.exports = WebServer;
+export default WebServer;

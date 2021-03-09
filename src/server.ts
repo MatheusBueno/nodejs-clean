@@ -1,20 +1,18 @@
-/**
- * server.js is a starting point
- */
-const EnvironmentVariables = require('./infrastructures/environment-variables');
-const ExpressWebServer = require('./infrastructures/express-server');
-const JsonWebToken = require('./infrastructures/json-web-token');
-const MongoDb = require('./infrastructures/mongodb');
-const UniqueId = require('./infrastructures/unique-id');
+import ExpressWebServer from "./infrastructures/express-server";
 
-const AuthenticationInterface = require('./interfaces/authentication');
-const ConfigurationInterface = require('./interfaces/configuration');
-const DatabaseInterface = require('./interfaces/database');
-const WebServerInterface = require('./interfaces/webserver');
+import EnvironmentVariables from "./infrastructures/environment-variables";
+import JsonWebToken from "./infrastructures/json-web-token";
+import MongoDb from "./infrastructures/mongodb";
+import UniqueId from "./infrastructures/unique-id";
 
-const ConfigurationInteractor = require('./usecases/configuration');
-const VersionInteractor = require('./usecases/version');
-const UserInteractor = require('./usecases/user');
+import AuthenticationInterface from "./interfaces/authentication";
+import ConfigurationInterface from "./interfaces/configuration";
+import DatabaseInterface from "./interfaces/database";
+import WebServerInterface from "./interfaces/webserver";
+
+import ConfigurationInteractor from "./usecases/configuration";
+import VersionInteractor from "./usecases/version";
+import UserInteractor from "./usecases/user";
 
 const environmentVariable = new EnvironmentVariables();
 const configurationInterface = new ConfigurationInterface({
@@ -46,8 +44,8 @@ const userInteractor = new UserInteractor({
 });
 
 const output = userInteractor.createNewEmailUser({
-  Email: 'someone@somewhere.net',
-  Password: 'secret',
+  Email: "someone@somewhere.net",
+  Password: "secret",
 });
 
 console.log(JSON.stringify(output, null, 2));

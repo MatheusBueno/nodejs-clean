@@ -1,10 +1,9 @@
 /**
  * Unique Id class is responsible for generating a Universally unique identifier
  */
-const uuidV4 = require('uuid/v4');
+import uuidV4 from "uuid/v4";
 
 class UniqueId {
-
   // generate() creates a new Universally unique identifier
   static generate() {
     // Generate a v4 UUID (random)
@@ -13,4 +12,4 @@ class UniqueId {
   }
 }
 
-module.exports = UniqueId;
+export default UniqueId;

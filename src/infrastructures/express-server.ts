@@ -2,11 +2,13 @@
  * Express server class is responsible for serving the API using
  * the Express web framework
  */
-const express = require('express');
+import express from 'express';
 
 const app = express();
 
 class ExpressServer {
+  webserverInterface: any;
+
   // constructor()
   // We are injecting the interface as part of the constructor
   constructor(options) {
@@ -32,4 +34,4 @@ class ExpressServer {
   }
 }
 
-module.exports = ExpressServer;
+export default ExpressServer;

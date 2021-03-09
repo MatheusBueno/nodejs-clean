@@ -3,6 +3,9 @@
  * to be used in the application
  */
 class ConfigurationData {
+  mongoDBUrl: any;
+  nodeEnv: any;
+  secretKey: any;
   // Connection string to MongoDB getter and setter
   get MongoDBUrl() {
     return this.mongoDBUrl;
@@ -39,4 +42,4 @@ class ConfigurationData {
   }
 }
 
-module.exports = ConfigurationData;
+export default ConfigurationData;

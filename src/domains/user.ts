@@ -2,6 +2,11 @@
  * User domain contains information about user
  */
 class User {
+  id: number;
+  email: string;
+  password: string;
+  webToken: string;
+
   get Id() {
     return this.id;
   }
@@ -43,4 +48,4 @@ class User {
   }
 }
 
-module.exports = User;
+export default User;

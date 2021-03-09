@@ -7,16 +7,15 @@
  *   PATCH version when you make backwards-compatible bug fixes.
  */
 class Version {
-
-   // toString() print out version number
+  // toString() print out version number
   static toString() {
     // Hard-code version number to 1 for now
     const output = {
-      version: '1.0.0',
+      version: "1.0.0",
     };
 
     return JSON.stringify(output, null, 2);
   }
 }
 
-module.exports = Version;
+export default Version;
